@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'nanum-gothic';
+    src: url('/fonts/nanum-gothic/NanumGothicCoding-Regular.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'nanum-gothic-bold';
+    src: url('/fonts/nanum-gothic/NanumGothicCoding-Bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'syne-mono';
+    src: url('/fonts/syne-mono/SyneMono-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'sometype-mono';
+    src: url('/fonts/sometype-mono/SometypeMono-Regular.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'sometype-mono-bold';
+    src: url('/fonts/sometype-mono/SometypeMono-Bold.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'sometype-mono-italic';
+    src: url('/fonts/sometype-mono/SometypeMono-Italic.ttf') format('truetype')
+}
