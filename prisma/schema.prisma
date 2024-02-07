@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id         String    @id @default(uuid())
+  name       String
+  short_desc String
+  cover      Json
+  contents   Content[]
+}
+
+model Content {
+  id     String  @id @default(uuid())
+  type   String
+  title  String?
+  body   String?
+  images Json?
+  layout Json?
+  post   Post    @relation(fields: [postId], references: [id])
+  postId String
+}
