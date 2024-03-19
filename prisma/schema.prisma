@@ -10,21 +10,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Category {
+  id    String @id @default(uuid())
+  name  String
+  posts Post[]
+}
+
 model Post {
   id         String    @id @default(uuid())
   name       String
-  short_desc String
+  short_desc String?
   cover      Json
   contents   Content[]
+  Category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId String?
 }
 
 model Content {
-  id     String  @id @default(uuid())
-  type   String
-  title  String?
-  body   String?
-  images Json?
-  layout Json?
-  post   Post    @relation(fields: [postId], references: [id])
-  postId String
+  id       String  @id @default(uuid())
+  type     String
+  title    String?
+  subtitle String?
+  body     String?
+  images   Json?
+  layout   Json?
+  post     Post    @relation(fields: [postId], references: [id])
+  postId   String
 }

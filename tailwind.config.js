@@ -15,7 +15,9 @@ export default {
       colors: {
         'eddie-green': '#254B15',
         'eddie-white': '#FAF5EF',
-        'eddie-gray': '#7D7163'
+        'eddie-gray': '#7D7163',
+        'eddie-cloudy': '#D2D5C3',
+        'eddie-storm': '#182953'
       }
 
     }
