@@ -43,6 +43,11 @@
   function modify_filter(e) {
     let tag = e.target.name;
 
+    if (!e.target.checked && tags.length == 1) {
+      e.target.checked = true;
+      return;
+    }
+
     if (e.target.checked) {
       tags = [...tags, tag];
     } else {
