@@ -1,9 +1,12 @@
 <script>
+  import { recent_page } from "$lib/stores";
 </script>
 
 <div class="flex flex-col xl:flex-row px-4 lg:px-8 items-center gap-10">
   <div class="flex items-center gap-10 pt-20 lg:pt-0">
-    <a href="/" class="rotated-left font-body">Click here to go back</a>
+    <a href={$recent_page} class="rotated-left font-body"
+      >Click here to go back</a
+    >
     <p class="font-body text-xl">
       I’m Eddie, I’m an industrial design student and an artist interested in
       hand work and design of all mediums
