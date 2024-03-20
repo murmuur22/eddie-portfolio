@@ -1,16 +1,8 @@
 <script>
   import { page } from "$app/stores";
-  import { recent_page } from "$lib/stores";
 
-  import { onMount } from "svelte";
   export let data;
   $: ({ posts } = data);
-
-  onMount(() => {
-    return () => {
-      recent_page.set($page.url.pathname);
-    };
-  });
 </script>
 
 <div

@@ -3,6 +3,14 @@
   import { Hamburger } from "svelte-hamburgers";
   import { fade, fly, slide } from "svelte/transition";
   import { clickOutside } from "$lib/clickOutside";
+  import { page } from "$app/stores";
+  import { onMount } from "svelte";
+  import { recent_page } from "$lib/stores";
+  onMount(() => {
+    return () => {
+      recent_page.set($page.url.pathname);
+    };
+  });
 
   let openMenu;
 
