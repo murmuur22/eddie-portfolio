@@ -1,0 +1,12 @@
+#markdown > h1 {
+  @apply pb-8 text-4xl;
+}
+#markdown > h2 {
+  @apply pb-8 pt-3 text-3xl;
+}
+#markdown > p {
+  @apply pb-4;
+}
+#markdown > img {
+  @apply pb-2;
+}
