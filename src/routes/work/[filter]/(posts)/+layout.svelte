@@ -53,8 +53,11 @@
   }
 </script>
 
-<aside class="fixed top-0 left-0 pt-24 pr-96 md:pr-10">
-  <nav class="pl-6 font-body text-eddie-storm text-lg md:text-xl">
+<aside
+  class="font-body fixed top-0 left-0 pl-6 pt-24 pr-96 md:pr-10 flex flex-col gap-4"
+>
+  <h2 class="text-xl">Filters</h2>
+  <nav class=" text-eddie-storm text-md md:text-md">
     <ul>
       {#each nav_items as item, i}
         <li>

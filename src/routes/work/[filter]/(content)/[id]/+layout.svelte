@@ -15,7 +15,7 @@
   >
 </aside>
 
-<div class="pt-24">
+<div class="pt-24 overflow-scroll">
   <slot />
 </div>
 
