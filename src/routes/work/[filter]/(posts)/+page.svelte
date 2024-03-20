@@ -1,5 +1,7 @@
 <script>
   import { page } from "$app/stores";
+  import { fly } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
 
   export let data;
   $: ({ posts } = data);
@@ -14,7 +16,24 @@
     class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 pl-4 md:pl-10"
   >
     {#each posts as post, i}
-      <a href={`${$page.url.pathname}/${post.id}`} class="px-10 md:px-0">
+      <a
+        out:fly={{
+          delay: 50 * i,
+          duration: 300,
+          y: 100,
+          opacity: 0.0,
+          easing: quintOut
+        }}
+        in:fly={{
+          delay: 50 * i,
+          duration: 300,
+          y: 100,
+          opacity: 0.0,
+          easing: quintOut
+        }}
+        href={`${$page.url.pathname}/${post.id}`}
+        class="px-10 md:px-0"
+      >
         <div class="px-10">
           <img
             class="w-80 2xl:w-96 border-eddie-storm border"
