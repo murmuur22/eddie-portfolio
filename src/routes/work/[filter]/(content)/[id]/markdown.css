@@ -5,7 +5,7 @@
   @apply pb-8 pt-3 text-3xl;
 }
 #markdown > p {
-  @apply pb-4;
+  @apply pb-4 text-lg;
 }
 #markdown > img {
   @apply pb-2;

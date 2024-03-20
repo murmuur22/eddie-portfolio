@@ -15,19 +15,19 @@
       tag: "fashion",
       checked: $page.url.pathname.includes("fashion") ? true : false
     },
-    {
-      name: "Product Design",
-      tag: "productdesign",
-      checked: $page.url.pathname.includes("productdesign") ? true : false
-    },
+    // {
+    //   name: "Product Design",
+    //   tag: "product_design",
+    //   checked: $page.url.pathname.includes("productdesign") ? true : false
+    // },
     {
       name: "Custom Clothing",
-      tag: "customclothing",
+      tag: "custom_clothing",
       checked: $page.url.pathname.includes("customclothing") ? true : false
     },
     {
       name: "Fiber Arts",
-      tag: "fiberarts",
+      tag: "fiber_arts",
       checked: $page.url.pathname.includes("fiberarts") ? true : false
     },
     {

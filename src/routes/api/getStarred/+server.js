@@ -2,18 +2,17 @@ import { error, json } from "@sveltejs/kit";
 import prisma from "$lib/prisma";
 
 export async function GET({ params }) {
-  let id = params.id;
-  let content;
+  let posts;
 
   try {
-    content = await prisma.content.findMany({
+    posts = await prisma.post.findMany({
       where: {
-        postId: id
+        starred: true
       }
     });
   } catch (error) {
     console.log(error);
   }
 
-  return json(content);
+  return json(posts);
 }
